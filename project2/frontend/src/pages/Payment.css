@@ -1,0 +1,268 @@
+.payment-page {
+  padding: 40px 0;
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.payment-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.payment-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.payment-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.payment-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.error-container,
+.success-container {
+  background: white;
+  border-radius: 16px;
+  padding: 48px 32px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.error-icon,
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 24px;
+}
+
+.error-container h2,
+.success-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.error-container p,
+.success-container > p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.booking-details {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 32px 0;
+  text-align: left;
+}
+
+.booking-details h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-item span:first-child {
+  font-weight: 500;
+  color: #333;
+}
+
+.detail-item span:last-child {
+  color: #666;
+}
+
+.detail-item .amount {
+  font-weight: 600;
+  color: #28a745;
+  font-size: 1.1rem;
+}
+
+.detail-item .status-paid {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.next-steps {
+  background-color: #e3f2fd;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 32px 0;
+  text-align: left;
+}
+
+.next-steps h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1565c0;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.next-steps ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.next-steps li {
+  padding: 8px 0;
+  color: #1976d2;
+  position: relative;
+  padding-left: 24px;
+}
+
+.next-steps li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.success-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin: 32px 0;
+}
+
+.redirect-notice {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 24px;
+}
+
+.loading {
+  text-align: center;
+  padding: 80px 20px;
+  color: #666;
+}
+
+.loading .spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 24px;
+}
+
+.loading p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .payment-page {
+    padding: 20px 0;
+  }
+  
+  .payment-container {
+    margin: 0 20px;
+  }
+  
+  .payment-header h1 {
+    font-size: 2rem;
+  }
+  
+  .error-container,
+  .success-container {
+    padding: 32px 24px;
+  }
+  
+  .error-icon,
+  .success-icon {
+    font-size: 3rem;
+  }
+  
+  .error-container h2,
+  .success-container h2 {
+    font-size: 1.75rem;
+  }
+  
+  .booking-details,
+  .next-steps {
+    padding: 20px;
+  }
+  
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 16px 0;
+  }
+  
+  .success-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .success-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-container {
+    margin: 0 10px;
+  }
+  
+  .error-container,
+  .success-container {
+    padding: 24px 16px;
+  }
+  
+  .payment-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .error-container h2,
+  .success-container h2 {
+    font-size: 1.5rem;
+  }
+  
+  .booking-details,
+  .next-steps {
+    padding: 16px;
+  }
+  
+  .next-steps li {
+    padding-left: 20px;
+    font-size: 0.9rem;
+  }
+}
+
